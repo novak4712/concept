@@ -1,0 +1,19 @@
+#top-slider{
+  width: 100%;
+  .first-slide-top{
+    background: url("../img/top-slide-img1.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    div{
+      padding: 23%;
+    }
+  }
+  .second-slide-top{
+    background: url("../img/top-slide-img2.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    div{
+      padding: 23%;
+    }
+  }
+}

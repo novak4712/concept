@@ -108,11 +108,6 @@ img {
   height: auto;
 }
 
-header {
-  background: url("../img/bg-header.jpg") no-repeat;
-  height: 950px;
-}
-
 .nav-header {
   width: 100%;
   position: fixed;
@@ -349,6 +344,32 @@ header {
 
 .items .item.menu.menu_state_open .menu__links {
   display: inline-block;
+}
+
+#top-slider {
+  width: 100%;
+}
+
+#top-slider .first-slide-top {
+  background: url("../img/top-slide-img1.png") no-repeat center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 100%;
+}
+
+#top-slider .first-slide-top div {
+  padding: 23%;
+}
+
+#top-slider .second-slide-top {
+  background: url("../img/top-slide-img2.png") no-repeat center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  width: 100%;
+}
+
+#top-slider .second-slide-top div {
+  padding: 23%;
 }
 
 .description {

@@ -45,8 +45,17 @@ function nav() {
 }
 
 
-function slider() {
-    $(".owl-carousel").owlCarousel({
+function sliderDescription() {
+    $("#description-slide").owlCarousel({
+        items: 1,
+        loop: true,
+        nav:true,
+        navText: ["<img src=\"img/slide-description-left.png\" alt=\"\">","<img src=\"img/slide-description-right.png\" alt=\"\">"]
+
+    });
+}
+function sliderTop() {
+    $("#top-slider").owlCarousel({
         items: 1,
         loop: true,
         nav:true,
@@ -56,10 +65,9 @@ function slider() {
 }
 
 
-
 $(document).ready(function () {
     nav();
-    slider();
-
-    new WOW().init();
+    sliderDescription();
+    sliderTop();
+    // new WOW().init();
 });
