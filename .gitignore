@@ -1,0 +1,15 @@
+# Исключение папок
+/.idea/
+
+# Перед применением раскомментировать
+# /app/libs/
+# /app/scss/
+
+/release/
+/node_modules/
+
+# Исключение файлов
+/**/*.map
+.bowerrc
+/**/*.psd
+/**/Thumbs.db

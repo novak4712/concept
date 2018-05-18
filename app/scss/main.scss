@@ -1,0 +1,29 @@
+@import "smart-grid";
+
+@include reset();
+
+@import "vars";
+@import "header";
+@import "navbar";
+@import "slider";
+@import "description";
+@import "assortment";
+@import "products";
+@import "news";
+@import "footer";
+.debug {
+	display: none;
+	@include debug(rgba(0, 0, 0, 0.4), 0);
+}
+.wrapper {
+	@include wrapper();
+}
+body{
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.75;
+	font-family: 'Open Sans', 'Arsenal', sans-serif;
+	overflow-x: hidden;
+	opacity: 1;
+}

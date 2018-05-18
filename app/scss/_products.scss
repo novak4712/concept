@@ -1,0 +1,178 @@
+.products {
+  background-image: url("../img/bg-products.jpg");
+  padding-bottom: 55px;
+  h3 {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 50px;
+    margin-bottom: 20px;
+  }
+  .hr {
+    width: 180px;
+    height: 1px;
+    border-top: 1px solid #3b3b3b;
+    margin: 0 auto;
+    padding-bottom: 55px;
+  }
+  .items.items-products {
+    @include row-flex();
+    justify-content: center;
+    .item.first-product {
+      @include col();
+      @include size(12);
+      @include size-md(8);
+      @include size-sm(10);
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: flex-end;
+      .first-product-left{
+        background: url("../img/bg-products-row1-left.jpg") no-repeat;
+        width: 50%;
+        border-radius: 5px 0 0 5px;
+        @include md(display, none);
+      }
+      .first-product-right{
+        background: url("../img/bg-products-row1-right.jpg") no-repeat;
+        width: 50%;
+        border-radius: 0 5px 5px 0;
+        @include md(width, 100%);
+        @include md(border-radius, 5px);
+        color: $white-color;
+
+        padding: 25px 0;
+        h4{
+          font-weight: bold;
+          margin-left: 40px;
+          margin-bottom: 15px;
+          span{
+            text-transform: uppercase;
+          }
+        }
+        ul li{
+          list-style: disc;
+          margin-left: 55px;
+          line-height: 29px;
+        }
+        .btn-product{
+          display: block;
+          width: 180px;
+          height: 50px;
+          border-radius: 5px;
+          color: $white-color;
+          background: $button-color;
+          text-decoration: none;
+          line-height: 50px;
+          text-align: center;
+          font-weight: bold;
+          margin: 20px 0 10px 40px;
+          border: 1px solid $button-color;
+          &:hover{
+            background: $white-color;
+            color: $text-main-color;
+            line-height: 48px;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+    .item.second-product {
+      @include col();
+      @include size(8);
+      @include size-md(8);
+      @include size-sm(10);
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: flex-end;
+      .second-product-left{
+        background: url("../img/bg-products-row2-left.jpg") no-repeat;
+        width: 50%;
+        border-radius: 5px 0 0 5px;
+        @include md(display, none);
+      }
+      .second-product-right{
+        background: url("../img/bg-products-row2-right.jpg") no-repeat;
+        background-size: cover;
+        width: 50%;
+        border-radius: 0 5px 5px 0;
+        color: $white-color;
+        padding: 25px 0;
+        @include md(width, 100%);
+        @include md(border-radius, 5px);
+        h4{
+          font-weight: bold;
+          margin-left: 20px;
+          margin-bottom: 15px;
+          line-height: 23px;
+          span{
+            text-transform: uppercase;
+          }
+        }
+        ul li{
+          list-style: disc;
+          margin-left: 35px;
+          line-height: 29px;
+        }
+        .btn-product{
+          display: block;
+          width: 180px;
+          height: 50px;
+          border-radius: 5px;
+          color: $white-color;
+          background: $button-color;
+          text-decoration: none;
+          line-height: 50px;
+          text-align: center;
+          font-weight: bold;
+          margin: 20px 0 15px 20px;
+          border: 1px solid $button-color;
+          &:hover{
+            background: $white-color;
+            color: $text-main-color;
+            line-height: 48px;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+    .item.download-product{
+      @include col();
+      @include size(4);
+      @include size-md(8);
+      @include size-sm(10);
+      margin-bottom: 30px;
+      .container-download-product{
+        background: $yellow-color;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        @include md(padding, 50px 0);
+        .download-product-item{
+          text-align: center;
+          text-decoration: none;
+          .img-download-product{
+            width: 70px;
+            height: 99px;
+            margin-bottom: 15px;
+          }
+          .text-download-product{
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            color: $text-main-color;
+            font-size: 24px;
+            font-family: 'Arsenal', sans-serif;
+            &:hover {
+              color: $white-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.assortment{
+  background: url('../img/bg-products-border-up.png') repeat-x 0 100%, url('../img/bg-assortment.jpg') no-repeat center;
+  @include md(background, url('../img/bg-products-border-up.png') repeat-x 0 100% $yellow-color);
+  padding-top: 55px;
+  padding-bottom: 100px;
+  .items{
+    @include row-flex();
+    @include lg(justify-content, center);
+    .item.card-assortment{
+      @include col();
+      @include size(6);
+      @include size-lg(8);
+      @include size-md(10);
+      color: $text-main-color;
+      h4{
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        line-height: 22px;
+      }
+      ul li{
+        padding-left: 60px;
+        line-height: 26px;
+        padding-bottom: 5px;
+      }
+      .baby-food{
+        background: url('../img/baby-food-list.png') no-repeat 0 4px;
+      }
+      .baby-juice{
+        background: url('../img/baby-juice-list.png') no-repeat 15px 4px;
+      }
+      p{
+        padding-top: 15px;
+      }
+      .btn-assortment{
+        display: block;
+        width: 180px;
+        height: 50px;
+        border-radius: 5px;
+        color: $white-color;
+        background: $button-color;
+        text-decoration: none;
+        line-height: 50px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 15px;
+        border: 1px solid $button-color;
+        &:hover{
+          background: $white-color;
+          color: $text-main-color;
+          line-height: 48px;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,150 @@
+footer {
+  background: $grey-color;
+  color: $white-color;
+  padding-top: 53px;
+  .items.top_footer {
+    @include row-flex();
+    justify-content: space-between;
+    .item.price {
+      @include col();
+      @include size(2);
+      @include size-md(6);
+      @include size-xs(12);
+      @include md(padding-left, 55px);
+      @include md(margin-bottom, 50px);
+      display: flex;
+      flex-wrap: wrap;
+      .footer-download {
+        width: 150px;
+        height: 60px;
+        border-radius: 20px;
+        border: 1px solid $white-color;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        line-height: 16px;
+        text-decoration: none;
+        color: $yellow-color;
+        margin-top: 5px;
+        &:hover{
+          background: $yellow-color;
+          color: $text-main-color;
+          transition: 0.3s;
+        }
+        img {
+          margin-right: 7px;
+        }
+      }
+      .stat{
+        width: 100%;
+        @include xs(margin-top, 50px);
+      }
+    }
+    .item.address {
+      @include col();
+      @include size(4);
+      @include size-md(6);
+      @include size-xs(12);
+      @include md(margin-bottom, 30px);
+
+      .container_marker {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 35px;
+        @include xs(padding-left, 40px);
+
+        .marker {
+          display: flex;
+          width: 100%;
+          padding-bottom: 15px;
+          line-height: 25px;
+          .icon-container {
+            flex-basis: 50px;
+            text-align: center;
+          }
+
+          .fa-icon {
+            font-size: 25px;
+            margin-top: 5px;
+          }
+        }
+      }
+
+    }
+    .item.telephones {
+      @include col();
+      @include size(3);
+      @include size-md(6);
+      @include size-xs(12);
+      @include md(margin-bottom, 30px);
+      @include xs(padding-left, 40px);
+      padding-left: 25px;
+      .marker {
+        display: flex;
+        width: 100%;
+        .icon-container {
+          flex-basis: 50px;
+          text-align: center;
+        }
+        .fa-icon {
+          font-size: 25px;
+          margin-top: 5px;
+        }
+        p{
+          line-height: 25px;
+        }
+        .yellow {
+          color: $yellow-color;
+          font-weight: bold;
+        }
+      }
+    }
+    .item.mode {
+      @include col();
+      @include size(3);
+      @include size-md(6);
+      @include size-xs(12);
+      @include md(padding-left, 35px);
+      @include md(margin-bottom, 30px);
+      @include xs(padding-left, 40px);
+      padding-left: 40px;
+      .marker {
+        display: flex;
+        line-height: 25px;
+        width: 100%;
+        .icon-container {
+          flex-basis: 50px;
+          text-align: center;
+        }
+        .fa-icon {
+          font-size: 25px;
+          margin-top: 5px;
+        }
+        .yellow {
+          color: $yellow-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .items.bottom_footer {
+    @include row-flex();
+    justify-content: space-between;
+    @include xs(justify-content, center);
+    margin-top: 25px;
+    padding-bottom: 20px;
+    .item {
+      @include col();
+      color: $text-copyright-color;
+      display: flex;
+      p{
+        margin-right: 10px;
+      }
+      img{
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  h3 {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .hr {
+    width: 180px;
+    height: 1px;
+    border-top: 1px solid #3b3b3b;
+    margin: 0px auto;
+    padding-bottom: 55px;
+  }
+  .items {
+    @include row-flex();
+    .item {
+      @include col();
+      @include size(12);
+
+      .items {
+        @include row-flex();
+        .item {
+          @include col();
+          @include size(6);
+          img{
+            margin-left: 5px;
+          }
+          p {
+            padding-bottom: 10px;
+            line-height: 24px;
+            padding-left: 10px;
+          }
+          .btn-description {
+            display: block;
+            width: 180px;
+            height: 50px;
+            border-radius: 5px;
+            color: $white-color;
+            background: $button-color;
+            text-decoration: none;
+            line-height: 50px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 16px;
+            margin-left: 7px;
+            border: 1px solid $button-color;
+            &:hover {
+              background: $white-color;
+              color: $text-main-color;
+              line-height: 48px;
+              transition: 0.3s;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.img-padding {
+  padding-right: 30px;
+}
+.text-margin{
+  margin-top: -5px;
+}
+button.owl-prev {
+  position: absolute;
+  top: 83.5%;
+  left: 37%;
+  outline: 0;
+ img{
+   box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+   width: 60px;
+   height: 60px;
+   display: block;
+   border-radius: 5px;
+ }
+}
+
+button.owl-next {
+  position: absolute;
+  top: 83.5%;
+  left:43%;
+  outline: 0;
+  img{
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 5px;
+  }
+}
