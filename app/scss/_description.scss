@@ -1,39 +1,70 @@
 .description {
-  padding-top: 30px;
+  padding-top: 75px;
   padding-bottom: 30px;
 
-  h3 {
-    font-family: 'Arsenal', sans-serif;
-    font-size: 48px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .hr {
-    width: 180px;
-    height: 1px;
-    border-top: 1px solid #3b3b3b;
-    margin: 0px auto;
-    padding-bottom: 55px;
-  }
   .items {
     @include row-flex();
     .item {
       @include col();
       @include size(12);
-
+      h3 {
+        font-family: 'Arsenal', sans-serif;
+        font-size: 48px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        margin-left: 15px;
+        color: $text-main-color;
+        @media screen and (max-width: 1140px){
+          font-size: 40px;
+        }
+        @media screen and (max-width: 960px){
+          font-size: 36px;
+        }
+      }
+      .hr {
+        width: 180px;
+        height: 1px;
+        border-top: 1px solid #3b3b3b;
+        margin: 0px auto;
+        padding-bottom: 55px;
+      }
       .items {
         @include row-flex();
         .item {
           @include col();
           @include size(6);
-          img{
-            margin-left: 5px;
+          @include size-lg(12);
+        }
+        .img-padding {
+          padding-right: 30px;
+          @media screen and (max-width: 1140px){
+            display: none;
+          }
+        }
+        .text-margin{
+          margin-top: -5px;
+          @media screen and (max-width: 1140px){
+            background: url("../img/bg-description-left.jpg") no-repeat center ;
+            background-size: cover;
           }
           p {
             padding-bottom: 10px;
             line-height: 24px;
-            padding-left: 10px;
+            @media screen and (max-width: 1140px){
+              font-size: 14px;
+              padding: 10px;
+              margin: 20px;
+              background: rgba(0,0,0, 0.5);
+              border-radius: 5px;
+              color:$white-color;
+            }
+            @media screen and (max-width: 540px){
+              font-size: 12px;
+              padding: 5px;
+            }
+
+
           }
           .btn-description {
             display: block;
@@ -47,52 +78,81 @@
             text-align: center;
             font-weight: bold;
             margin-top: 16px;
-            margin-left: 7px;
             border: 1px solid $button-color;
+            @media screen and (max-width: 1140px){
+              margin: 50px;
+              margin-left: auto;
+            }
+            @media screen and (max-width: 540px){
+              width: 150px;
+              height: 40px;
+              line-height: 40px;
+              font-size: 14px;
+            }
             &:hover {
               background: $white-color;
               color: $text-main-color;
-              line-height: 48px;
               transition: 0.3s;
             }
           }
-
         }
       }
     }
   }
 }
+#description-slide{
+  button.owl-prev {
+    position: absolute;
+    top: 83.6%;
+    left: 36.5%;
+    outline: 0;
+    @media screen and (max-width: 1140px){
+      top: 82%;
+      left: 5%;
+    }
+    @media screen and (max-width: 540px){
+      top: 91%;
+      left: 5%;
+    }
+    img{
+      box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+      width: 60px;
+      height: 60px;
+      display: block;
+      border-radius: 5px;
+      @media screen and (max-width: 540px){
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
 
-.img-padding {
-  padding-right: 30px;
-}
-.text-margin{
-  margin-top: -5px;
-}
-button.owl-prev {
-  position: absolute;
-  top: 83.5%;
-  left: 37%;
-  outline: 0;
- img{
-   box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-   width: 60px;
-   height: 60px;
-   display: block;
-   border-radius: 5px;
- }
-}
-
-button.owl-next {
-  position: absolute;
-  top: 83.5%;
-  left:43%;
-  outline: 0;
-  img{
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-    width: 60px;
-    height: 60px;
-    display: block;
-    border-radius: 5px;
+  button.owl-next {
+    position: absolute;
+    top: 83.6%;
+    left:42.4%;
+    outline: 0;
+    @media screen and (max-width: 1140px){
+      top: 82%;
+      left: 15%;
+    }
+    @media screen and (max-width: 720px){
+      left: 20%;
+    }
+    @media screen and (max-width: 540px){
+      top: 91%;
+      left: 15%;
+    }
+    img{
+      box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+      width: 60px;
+      height: 60px;
+      display: block;
+      border-radius: 5px;
+      @media screen and (max-width: 540px){
+        width: 30px;
+        height: 30px;
+      }
+    }
   }
 }

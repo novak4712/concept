@@ -80,16 +80,16 @@
                     </div>
                     <ul class="menu__links">
                         <li><a class="menu__links-item active-item-menu" href="#">Главная</a></li>
-                        <li><a class="menu__links-item" href="#">О предприятии</a></li>
-                        <li><a class="menu__links-item" href="#">Продукция</a>
+                        <li><a class="menu__links-item" href="#description">О предприятии</a></li>
+                        <li><a class="menu__links-item" href="#assortment">Продукция</a>
                             <ul class="submenu">
-                                <li><a href="#">Детское питание «Топтышка»</a></li>
-                                <li><a href="#">Консервы общего назначенияя «Samberry»</a></li>
+                                <li><a href="#first-product">Детское питание «Топтышка»</a></li>
+                                <li><a href="#second-product">Консервы общего назначенияя «Samberry»</a></li>
                             </ul>
                         </li>
-                        <li><a class="menu__links-item" href="#">Новости</a></li>
+                        <li><a class="menu__links-item" href="#news">Новости</a></li>
                         <li><a class="menu__links-item" href="#">Акции и конкурсы</a></li>
-                        <li><a class="menu__links-item" href="#">Контакты</a></li>
+                        <li><a class="menu__links-item" href="#footer">Контакты</a></li>
                     </ul>
 
                     <div class="menu__social">
@@ -114,8 +114,32 @@
 
     <!-- Slider -->
     <div class="owl-carousel" id="top-slider">
-        <div class="first-slide-top"> <div></div></div>
-        <div class="second-slide-top"> <div></div> </div>
+        <div class="first-slide-top">
+            <div class="wrapper">
+                <div class="items">
+                    <div class="item">
+                        <h1>Попробуй качество</br> на вкус</h1>
+                        <div class="hr"></div>
+                        <h2>Детское питание и соки «Топтышка» -</br>для здоровья Ваших детей</h2>
+                        <a href="#" class="btn-slider-top">Подробнее</a>
+                        <a href="#description" class="btn-slider-top-mouse"><img src="img/slider-top-mouse.png" alt="mouse"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-slide-top">
+            <div class="wrapper">
+                <div class="items">
+                    <div class="item">
+                        <h1>Попробуй качество</br> на вкус</h1>
+                        <div class="hr"></div>
+                        <h2>Детское питание и соки «Топтышка» -</br>для здоровья Ваших детей</h2>
+                        <a href="#" class="btn-slider-top">Подробнее</a>
+                        <a href="#description" class="btn-slider-top-mouse"><img src="img/slider-top-mouse.png" alt="mouse"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Slider -->
 </header>
@@ -123,12 +147,13 @@
 <!--========== PAGE LAYOUT ==========-->
 <main>
     <!-- description -->
-    <section class="description">
-        <h3>Детское питание «Топтышка»</h3>
-        <div class="hr"></div>
+    <section class="description" id="description">
+
         <div class="wrapper">
             <div class="items">
-                <div class="item">
+                <div class="item wow fadeInRight" data-wow-duration=".3" data-wow-delay=".3s">
+                    <h3>Детское питание «Топтышка»</h3>
+                    <div class="hr"></div>
                     <div class="owl-carousel" id="description-slide">
                         <div>
                             <div class="items">
@@ -153,7 +178,7 @@
                                         вкусовых добавок.</p>
                                     <p>Наша гордость – детское питание «Топтышка» - давно полюбилась малышам и мамам
                                         нескольких поколений.</p>
-                                    <a href="#" class="btn-description">Подробние</a>
+                                    <a href="#" class="btn-description">Подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +205,7 @@
                                         вкусовых добавок.</p>
                                     <p>Наша гордость – детское питание «Топтышка» - давно полюбилась малышам и мамам
                                         нескольких поколений.</p>
-                                    <a href="#" class="btn-description">Подробние</a>
+                                    <a href="#" class="btn-description">Подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -193,10 +218,10 @@
     <!-- End description -->
 
     <!-- assortment -->
-    <section class="assortment">
+    <section class="assortment" id="assortment">
         <div class="wrapper">
             <div class="items">
-                <div class="item card-assortment">
+                <div  class="item card-assortment wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
                     <h4>
                         Продукция, выпускаемая на комбинате, представлена широким ассортиментом:
                     </h4>
@@ -234,43 +259,45 @@
         <div class="hr"></div>
         <div class="wrapper">
             <div class="items items-products">
-                <div class="item first-product">
-                    <div class="first-product-left">
-                    </div>
-                    <div class="first-product-right">
-                        <h4><span>Детское питание</span> «Топтышка»</h4>
-                        <ul class="list-product">
-                            <li>соки без сахара</li>
-                            <li>нектары фруктовые неосветленные</li>
-                            <li>нектары плодово-ягодные с мякотью</li>
-                            <li>нектары овощные и плодоовощные с мякотью</li>
-                            <li>пюре без сахара</li>
-                            <li>пюре фруктовые и плодово-ягодные</li>
-                            <li>пюре овощные и плодоовощные</li>
-                            <li>пюре с добавлением сливок, творога</li>
-                        </ul>
-                        <a href="#" class="btn-product">Перейти</a>
+                <div class="item first-product wow zoomIn" id="first-product" data-wow-duration=".3" data-wow-delay=".1s">
+                    <div class="product-container">
+                        <div class="product-bg"></div>
+                        <div class="first-product-right">
+                            <h4><span>Детское питание</span> «Топтышка»</h4>
+                            <ul class="list-product">
+                                <li>соки без сахара</li>
+                                <li>нектары фруктовые неосветленные</li>
+                                <li>нектары плодово-ягодные с мякотью</li>
+                                <li>нектары овощные и плодоовощные с мякотью</li>
+                                <li>пюре без сахара</li>
+                                <li>пюре фруктовые и плодово-ягодные</li>
+                                <li>пюре овощные и плодоовощные</li>
+                                <li>пюре с добавлением сливок, творога</li>
+                            </ul>
+                            <a href="#" class="btn-product">Перейти</a>
+                        </div>
                     </div>
                 </div>
-                <div class="item second-product">
-                    <div class="second-product-left">
+                <div class="item second-product wow zoomIn" id="second-product" data-wow-duration=".3" data-wow-delay=".1s">
+                    <div class="product-container">
+                        <div class="product-bg"></div>
+                        <div class="second-product-right">
+                            <h4><span>КОНСЕРВЫ ОБЩЕГО НАЗНАЧЕНИЯ</span> «Samberry»</h4>
+                            <ul class="list-product">
+                                <li>соки и нектары</li>
+                                <li>джемы и варенья</li>
+                                <li>плоды и ягоды протертые</li>
+                                <li>овощная консервация</li>
+                                <li>плодовые пюре-полуфабрикаты</li>
+                                <li>ягодные пюре-полуфабрикаты</li>
+                                <li>овощные пюре-полуфабрикаты</li>
+                            </ul>
+                            <a href="#" class="btn-product">Перейти</a>
+                        </div>
+                    </div>
 
-                    </div>
-                    <div class="second-product-right">
-                        <h4><span>КОНСЕРВЫ ОБЩЕГО НАЗНАЧЕНИЯ</span> «Samberry»</h4>
-                        <ul class="list-product">
-                            <li>соки и нектары</li>
-                            <li>джемы и варенья</li>
-                            <li>плоды и ягоды протертые</li>
-                            <li>овощная консервация</li>
-                            <li>плодовые пюре-полуфабрикаты</li>
-                            <li>ягодные пюре-полуфабрикаты</li>
-                            <li>овощные пюре-полуфабрикаты</li>
-                        </ul>
-                        <a href="#" class="btn-product">Перейти</a>
-                    </div>
                 </div>
-                <div class="item download-product">
+                <div class="item download-product wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
                     <div class="container-download-product">
                         <a href="price/price.txt" download class="download-product-item">
                             <img src="img/product_download.png" alt="download" class="img-download-product">
@@ -285,12 +312,12 @@
     <!-- End products -->
 
     <!-- news -->
-    <section class="news">
+    <section class="news" id="news">
         <h3>новости</h3>
         <div class="hr"></div>
         <div class="wrapper">
             <div class="items">
-                <div class="item card-news">
+                <div class="item card-news wow fadeInUp" data-wow-duration=".3" data-wow-delay=".1s">
                     <img class="card-img-top" src="img/news_1.jpg" alt="Card image cap">
                     <div class="news-body">
                         <h5 class="news-title">Заслуженная награда</h5>
@@ -303,7 +330,7 @@
                     </div>
                     <a href="#" class="btn-news">Подробнее</a>
                 </div>
-                <div class="item card-news">
+                <div class="item card-news wow fadeInUp" data-wow-duration=".3" data-wow-delay=".1s">
                     <img class="card-img-top" src="img/news_2.jpg" alt="Card image cap">
                     <div class="news-body">
                         <h5 class="news-title">"Коробка смелости от «Топтышки»</h5>
@@ -316,7 +343,7 @@
                     </div>
                     <a href="#" class="btn-news">Подробнее</a>
                 </div>
-                <div class="item card-news">
+                <div class="item card-news wow fadeInUp" data-wow-duration=".3" data-wow-delay=".1s">
                     <img class="card-img-top" src="img/news_3.jpg" alt="Card image cap">
                     <div class="news-body">
                         <h5 class="news-title">Благотворительная акция «Коробка смелости»</h5>
@@ -338,7 +365,7 @@
 </main>
 <!--========== END PAGE LAYOUT ==========-->
 <!--========== FOOTER ==========-->
-<footer>
+<footer id="footer">
     <div class="wrapper">
         <div class="items top_footer">
             <!-- Price -->
@@ -393,10 +420,10 @@
                     </div>
                     <div>
                         <p class="yellow">Приемная:</p>
-                        <p>+375 1651 25877</p>
+                        <p class="phone-footer">+375 1651 25877</p>
                         <p class="yellow">Коммерческий отдел:</p>
-                        <p>+375 1651 21509</p>
-                        <p>+375 1651 21509</p>
+                        <p class="phone-footer">+375 1651 21509</p>
+                        <p class="phone-footer">+375 1651 21509</p>
                     </div>
                 </div>
             </div>
@@ -420,8 +447,8 @@
         <!-- End mode  -->
 
     </div>
-    <!--// end row -->
-    </div>
+
+
 
     <!-- Copyright -->
     <div class="wrapper">
@@ -446,7 +473,6 @@
         crossorigin="anonymous"></script>
 <script src="owlcarousel/owl.carousel.min.js"></script>
 <script src="js/wow.js"></script>
-
 
 
 <!-- PAGE LEVEL SCRIPTS -->

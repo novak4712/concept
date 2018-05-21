@@ -1,19 +1,177 @@
 #top-slider{
   width: 100%;
-  .first-slide-top{
+  .first-slide-top, .second-slide-top{
     background: url("../img/top-slide-img1.png") no-repeat center;
     background-size: cover;
     width: 100%;
-    div{
-      padding: 23%;
+    @media screen and (max-width: 960px){
+      background-position: left;
+    }
+    @media screen and (max-width: 540px){
+      background-size: auto;
+    }
+    .items{
+      @include row-flex();
+      .item{
+        @include col();
+        color: $text-main-color;
+        h1{
+          font-family: 'Arsenal', sans-serif;
+          font-size: 72px;
+          text-transform: uppercase;
+          margin-top: 215px;
+          line-height: 85px;
+          @media screen and (max-width: 1140px){
+            margin-left: 20px;
+            font-size: 64px;
+          }
+          @media screen and (max-width: 960px){
+            font-size: 56px;
+          }
+          @media screen and (max-width: 720px){
+            font-size: 48px;
+            margin-top: 150px;
+          }
+          @media screen and (max-width: 540px){
+            font-size: 28px;
+            margin-top: 150px;
+            line-height: 55px;
+          }
+        }
+        .hr{
+          width: 435px;
+          height: 1px;
+          border-top: 1px solid #3b3b3b;
+          margin-top: 30px;
+          @media screen and (max-width: 1140px){
+            margin-left: 20px;
+          }
+          @media screen and (max-width: 540px){
+            width: 280px;
+          }
+        }
+        h2{
+          font-size: 30px;
+          margin-top: 25px;
+          line-height: 35px;
+          @media screen and (max-width: 1140px){
+            margin-left: 20px;
+            font-size: 24px;
+          }
+          @media screen and (max-width: 960px){
+            font-size: 20px;
+          }
+          @media screen and (max-width: 720px){
+            font-size: 16px;
+          }
+        }
+        .btn-slider-top{
+          display: block;
+          width: 220px;
+          height: 70px;
+          border-radius: 5px;
+          color: $white-color;
+          background: $button-color;
+          text-decoration: none;
+          line-height: 70px;
+          text-align: center;
+          font-size: 20px;
+          font-weight: bold;
+          margin-top: 50px;
+          border: 1px solid $button-color;
+          @media screen and (max-width: 1140px){
+            margin-left: 20px;
+            width: 180px;
+            height: 50px;
+            line-height: 50px;
+          }
+          @media screen and (max-width: 720px){
+            margin-top: 30px;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+          }
+          @media screen and (max-width: 540px){
+            margin-bottom: 80px;
+          }
+          &:hover {
+            background: $white-color;
+            color: $text-main-color;
+            transition: 0.3s;
+          }
+        }
+        .btn-slider-top-mouse{
+          display: block;
+          width: 24px;
+          height: 40px;
+          margin-top: 222px;
+          margin-bottom: 10px;
+          margin-left: 180px;
+          @media screen and (max-width: 1140px){
+            margin-left: 23.5%;
+          }
+          @media screen and (max-width: 960px){
+            margin-left: 94.5%;
+          }
+          @media screen and (max-width: 720px){
+            margin-left: 97.5%;
+          }
+          @media screen and (max-width: 540px){
+            display: none;
+          }
+        }
+      }
     }
   }
   .second-slide-top{
     background: url("../img/top-slide-img2.png") no-repeat center;
     background-size: cover;
     width: 100%;
-    div{
-      padding: 23%;
+  }
+  button.owl-prev {
+    position: absolute;
+    top: 79%;
+    left: 27.4%;
+    outline: 0;
+    @media screen and (max-width: 1140px){
+      left: 23%;
     }
+    @media screen and (max-width: 540px){
+      left: 15%;
+      top: 90%;
+    }
+  }
+  button.owl-next {
+    position: absolute;
+    top: 79%;
+    left: 29.5%;
+    outline: 0;
+    @media screen and (max-width: 1140px){
+      left: 26%;
+    }
+    @media screen and (max-width: 960px){
+      left: 28%;
+    }
+    @media screen and (max-width: 540px){
+      left: 30%;
+      top: 90%;
+    }
+  }
+   button.owl-dot{
+    position: absolute;
+    top: 78%;
+    left: 19%;
+    background-image: url("../img/slider-pagination.png");
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+     outline: 0;
+     @media screen and (max-width: 1140px){
+       left: 9%;
+     }
+     @media screen and (max-width: 540px){
+       display: none;
+     }
   }
 }

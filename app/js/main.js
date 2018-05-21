@@ -33,11 +33,13 @@ function nav() {
         var top = $(this).scrollTop();
         if ( top >= 50 || width < 1200) {
             menu.css({
-                'background': '#ffffff'
+                'background': '#ffffff',
+                'border-bottom':'1px solid #3b3b3b'
             });
         } else if ( top <= 50 || width > 1200) {
                 menu.css({
-                    'background': 'none'
+                    'background': 'none',
+                    'border-bottom':'none'
                 });
         }
     });
@@ -59,9 +61,21 @@ function sliderTop() {
         items: 1,
         loop: true,
         nav:true,
-        navText: ["<img src=\"img/slide-description-left.png\" alt=\"\">","<img src=\"img/slide-description-right.png\" alt=\"\">"]
-
+        navText: ["<img src=\"img/slide-top-left.png\" alt=\"\">","<img src=\"img/slide-top-right.png\" alt=\"\">"]
     });
+    var dots = $("#top-slider .owl-dot").length;
+    var index = $("#top-slider .owl-dot.active").index() + 1;
+    $('#top-slider .owl-dot:first-child').text(index + "/" + dots);
+
+    $('.owl-next').click(function() {
+        var index = $("#top-slider .owl-dot.active").index() + 1;
+        $('#top-slider .owl-dot:first-child').text(index + "/" + dots);
+    })
+
+    $('.owl-prev').click(function() {
+        var index = $("#top-slider .owl-dot.active").index() + 1;
+        $('#top-slider .owl-dot:first-child').text(index + "/" + dots);
+    })
 }
 
 
@@ -69,5 +83,8 @@ $(document).ready(function () {
     nav();
     sliderDescription();
     sliderTop();
-    // new WOW().init();
+    new WOW().init();
+
+
+
 });

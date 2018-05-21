@@ -13,9 +13,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-bottom: 10px;
     .logo {
-      padding: 15px 0 0 10px;
+      padding-top: 15px;
       order: 1;
       @media screen and (max-width: 540px){
         margin-left: auto;
@@ -63,7 +62,7 @@
       font-weight: bold;
       padding-top: 20px;
       display: flex;
-      padding-left: 5%;
+      padding-left: 5.2%;
       order: 2;
       width: 60%;
       @media screen and (max-width: 1200px){
@@ -140,11 +139,11 @@
     }
     .menu__social {
       padding-top: 20px;
-      padding-left: 30px;
+      padding-left: 28px;
       order: 3;
       @media screen and (max-width: 1200px){
         margin-left: auto;
-        margin-right: 30px;
+        padding-right: 30px;
       }
       .menu__social-item {
         padding-left: 6px;
@@ -154,7 +153,7 @@
         display: inline-block;
         font-size: 14px;
         font-weight: bold;
-        top: -6px;
+        top: -7px;
         &:hover {
           .dropdown-content {
             display: block;
@@ -163,16 +162,17 @@
         .dropbtn {
           cursor: pointer;
           border-left: 1px solid $text-main-color;
-          padding-left: 10px;
-          margin-left: 10px;
+          padding-left: 12px;
+          margin-left: 11px;
           width: 20px;
+          line-height: 30px;
           &::after {
             background: rgba(0, 0, 0, 0) url("../img/menu-lang.png") no-repeat scroll center center;
             content: "";
-            height: 16px;
+            height: 17px;
             position: absolute;
             left: 55px;
-            top: 5px;
+            top: 10px;
             width: 16px;
           }
         }

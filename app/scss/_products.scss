@@ -1,24 +1,34 @@
 .products {
   background-image: url("../img/bg-products.jpg");
   padding-bottom: 55px;
+  padding-top: 35px;
   h3 {
     font-family: 'Arsenal', sans-serif;
     font-size: 48px;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    color: $text-main-color;
+    @media screen and (max-width: 1140px){
+      font-size: 40px;
+    }
+    @media screen and (max-width: 960px){
+      font-size: 36px;
+    }
   }
   .hr {
     width: 180px;
     height: 1px;
     border-top: 1px solid #3b3b3b;
     margin: 0 auto;
-    padding-bottom: 55px;
+    margin-bottom: 52px;
   }
   .items.items-products {
     @include row-flex();
     justify-content: center;
+    @media screen and (max-width: 960px){
+      font-size: 14px;
+    }
     .item.first-product {
       @include col();
       @include size(12);
@@ -27,52 +37,64 @@
       margin-bottom: 30px;
       display: flex;
       justify-content: flex-end;
-      .first-product-left{
-        background: url("../img/bg-products-row1-left.jpg") no-repeat;
-        width: 50%;
-        border-radius: 5px 0 0 5px;
-        @include md(display, none);
-      }
-      .first-product-right{
-        background: url("../img/bg-products-row1-right.jpg") no-repeat;
+      background: url("../img/bg-products-row1.jpg") no-repeat;
+      background-size: cover;
+      .product-container{
         width: 50%;
         border-radius: 0 5px 5px 0;
         @include md(width, 100%);
         @include md(border-radius, 5px);
-        color: $white-color;
-
-        padding: 25px 0;
-        h4{
-          font-weight: bold;
-          margin-left: 40px;
-          margin-bottom: 15px;
-          span{
-            text-transform: uppercase;
-          }
+        position: relative;
+        .product-bg{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 99;
+          filter: blur(5px);
+          background: rgba(23,23,23, 0.7);
         }
-        ul li{
-          list-style: disc;
-          margin-left: 55px;
-          line-height: 29px;
-        }
-        .btn-product{
-          display: block;
-          width: 180px;
-          height: 50px;
-          border-radius: 5px;
+        .first-product-right{
+          position: relative;
+          z-index: 100;
           color: $white-color;
-          background: $button-color;
-          text-decoration: none;
-          line-height: 50px;
-          text-align: center;
-          font-weight: bold;
-          margin: 20px 0 10px 40px;
-          border: 1px solid $button-color;
-          &:hover{
-            background: $white-color;
-            color: $text-main-color;
-            line-height: 48px;
-            transition: 0.3s;
+          padding: 22px 0;
+          h4{
+            font-weight: bold;
+            margin-left: 40px;
+            margin-bottom: 11px;
+            span{
+              text-transform: uppercase;
+            }
+          }
+          ul li{
+            list-style: disc;
+            margin-left: 56px;
+            line-height: 29px;
+          }
+          .btn-product{
+            display: block;
+            width: 180px;
+            height: 50px;
+            border-radius: 5px;
+            color: $white-color;
+            background: $button-color;
+            text-decoration: none;
+            line-height: 50px;
+            text-align: center;
+            font-weight: bold;
+            margin: 22px 0 10px 38px;
+            border: 1px solid $button-color;
+            @media screen and (max-width: 720px){
+              width: 150px;
+              height: 40px;
+              line-height: 40px;
+              font-size: 14px;
+            }
+            &:hover{
+              background: $white-color;
+              color: $text-main-color;
+              transition: 0.3s;
+            }
           }
         }
       }
@@ -85,56 +107,72 @@
       margin-bottom: 30px;
       display: flex;
       justify-content: flex-end;
-      .second-product-left{
-        background: url("../img/bg-products-row2-left.jpg") no-repeat;
-        width: 50%;
-        border-radius: 5px 0 0 5px;
-        @include md(display, none);
-      }
-      .second-product-right{
-        background: url("../img/bg-products-row2-right.jpg") no-repeat;
-        background-size: cover;
+      background: url("../img/bg-products-row2.jpg") no-repeat;
+      background-size: cover;
+      border-radius: 0 5px 5px 0;
+      .product-container{
         width: 50%;
         border-radius: 0 5px 5px 0;
-        color: $white-color;
-        padding: 25px 0;
         @include md(width, 100%);
         @include md(border-radius, 5px);
-        h4{
-          font-weight: bold;
-          margin-left: 20px;
-          margin-bottom: 15px;
-          line-height: 23px;
-          span{
-            text-transform: uppercase;
-          }
+        position: relative;
+        .product-bg{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 99;
+          filter: blur(5px);
+          background: rgba(23,23,23, 0.7);
         }
-        ul li{
-          list-style: disc;
-          margin-left: 35px;
-          line-height: 29px;
-        }
-        .btn-product{
-          display: block;
-          width: 180px;
-          height: 50px;
-          border-radius: 5px;
+        .second-product-right{
+          position: relative;
+          z-index: 100;
           color: $white-color;
-          background: $button-color;
-          text-decoration: none;
-          line-height: 50px;
-          text-align: center;
-          font-weight: bold;
-          margin: 20px 0 15px 20px;
-          border: 1px solid $button-color;
-          &:hover{
-            background: $white-color;
-            color: $text-main-color;
-            line-height: 48px;
-            transition: 0.3s;
+          padding: 25px 0;
+          @include md(width, 100%);
+          @include md(border-radius, 5px);
+          h4{
+            font-weight: bold;
+            margin-left: 20px;
+            margin-bottom: 13px;
+            line-height: 24px;
+            span{
+              text-transform: uppercase;
+            }
+          }
+          ul li{
+            list-style: disc;
+            margin-left: 35px;
+            line-height: 29px;
+          }
+          .btn-product{
+            display: block;
+            width: 180px;
+            height: 50px;
+            border-radius: 5px;
+            color: $white-color;
+            background: $button-color;
+            text-decoration: none;
+            line-height: 50px;
+            text-align: center;
+            font-weight: bold;
+            margin: 20px 0 15px 20px;
+            border: 1px solid $button-color;
+            @media screen and (max-width: 720px){
+              width: 150px;
+              height: 40px;
+              line-height: 40px;
+              font-size: 14px;
+            }
+            &:hover{
+              background: $white-color;
+              color: $text-main-color;
+              transition: 0.3s;
+            }
           }
         }
       }
+
     }
     .item.download-product{
       @include col();
@@ -151,14 +189,14 @@
         justify-content: center;
         align-items: center;
         border-radius: 5px;
-        @include md(padding, 50px 0);
+        @include md(padding, 30px 0);
         .download-product-item{
           text-align: center;
           text-decoration: none;
           .img-download-product{
             width: 70px;
             height: 99px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
           }
           .text-download-product{
             width: 100%;

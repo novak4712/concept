@@ -1,7 +1,7 @@
 footer {
   background: $grey-color;
   color: $white-color;
-  padding-top: 53px;
+  padding-top: 54px;
   .items.top_footer {
     @include row-flex();
     justify-content: space-between;
@@ -15,15 +15,15 @@ footer {
       display: flex;
       flex-wrap: wrap;
       .footer-download {
-        width: 150px;
-        height: 60px;
+        width: 148px;
+        height: 58px;
         border-radius: 20px;
         border: 1px solid $white-color;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        line-height: 16px;
+        line-height: 19px;
         text-decoration: none;
         color: $yellow-color;
         margin-top: 5px;
@@ -33,10 +33,11 @@ footer {
           transition: 0.3s;
         }
         img {
-          margin-right: 7px;
+          margin-right: 8px;
         }
       }
       .stat{
+        margin-top: 10px;
         width: 100%;
         @include xs(margin-top, 50px);
       }
@@ -52,19 +53,18 @@ footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding-left: 35px;
+        padding-left: 37px;
         @include xs(padding-left, 40px);
 
         .marker {
           display: flex;
           width: 100%;
           padding-bottom: 15px;
-          line-height: 25px;
+          line-height: 24px;
           .icon-container {
             flex-basis: 50px;
             text-align: center;
           }
-
           .fa-icon {
             font-size: 25px;
             margin-top: 5px;
@@ -93,7 +93,7 @@ footer {
           margin-top: 5px;
         }
         p{
-          line-height: 25px;
+          line-height: 24px;
         }
         .yellow {
           color: $yellow-color;
@@ -109,11 +109,12 @@ footer {
       @include md(padding-left, 35px);
       @include md(margin-bottom, 30px);
       @include xs(padding-left, 40px);
-      padding-left: 40px;
       .marker {
         display: flex;
-        line-height: 25px;
+        line-height: 24px;
         width: 100%;
+        padding-left: 30px;
+        @include lg(padding-left, 0);
         .icon-container {
           flex-basis: 50px;
           text-align: center;
@@ -122,10 +123,15 @@ footer {
           font-size: 25px;
           margin-top: 5px;
         }
-        .yellow {
-          color: $yellow-color;
-          font-weight: bold;
+        div{
+          width: 100%;
+          padding-left: 8px;
+          .yellow {
+            color: $yellow-color;
+            font-weight: bold;
+          }
         }
+
       }
     }
   }
@@ -133,7 +139,7 @@ footer {
     @include row-flex();
     justify-content: space-between;
     @include xs(justify-content, center);
-    margin-top: 25px;
+    margin-top: 27px;
     padding-bottom: 20px;
     .item {
       @include col();
